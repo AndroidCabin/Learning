@@ -1,6 +1,6 @@
 package com.learning.java8.lambda;
 
-import com.learning.java8.Utils;
+import com.learning.util.Printer;
 
 import java.util.Comparator;
 import java.util.function.BiFunction;
@@ -12,7 +12,7 @@ public class LambdaTest {
     public void test() {
 
         //1
-        Runnable runnable = () -> Utils.println("Hello Java 8!");
+        Runnable runnable = () -> Printer.println("Hello Java 8!");
 
         //2
         Predicate<String> predicate = (s) -> s == null || "".equals(s);
@@ -20,7 +20,7 @@ public class LambdaTest {
         //3
         Runnable runnable1 = () -> {
           String user = System.getProperty("user.name");
-          Utils.println("Hello " + user);
+          Printer.println("Hello " + user);
         };
 
         //4
