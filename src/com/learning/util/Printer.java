@@ -22,9 +22,7 @@ public final class Printer {
         IntStream.of(array)
                 .forEach((i) -> {
                     System.out.print(i);
-                    if (i != array.length -1) {
-                        System.out.print(',');
-                    }
+                    System.out.print(',');
                 });
         System.out.print(']');
     }

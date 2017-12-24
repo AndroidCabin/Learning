@@ -6,6 +6,7 @@ import javafx.util.Pair;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 
@@ -17,7 +18,7 @@ import java.util.stream.Stream;
  * @since   v1.0
  */
 
-class StreamDemo {
+class StreamOperation {
 
     public static void map() {
         List<String> upperCaseList = Stream.of("talk", "is", "cheap", ",", "show", "me", "the", "code")
@@ -118,15 +119,29 @@ class StreamDemo {
         Printer.println(array.parallelStream().findAny().get());
     }
 
+    public static void range() {
+        IntStream intStream = IntStream.range(1, 10);
+        int[] array = intStream.toArray();
+        Printer.print(array);
+    }
+
+    public static void rangeClosed() {
+        IntStream intStream = IntStream.rangeClosed(1, 10);
+        int[] array = intStream.toArray();
+        Printer.print(array);
+    }
+
     public static void main(String[] args) {
-//        StreamDemo.flatMap();
-//        StreamDemo.map();
-//        StreamDemo.filter();
-//        StreamDemo.distinct();
-//        StreamDemo.limit();
-//        StreamDemo.skip();
-//        StreamDemo.anyMatch();
-//        StreamDemo.findAny();
-        StreamDemo.findAnyParallelStream();
+//        StreamOperation.flatMap();
+//        StreamOperation.map();
+//        StreamOperation.filter();
+//        StreamOperation.distinct();
+//        StreamOperation.limit();
+//        StreamOperation.skip();
+//        StreamOperation.anyMatch();
+//        StreamOperation.findAny();
+//        StreamOperation.findAnyParallelStream();
+//        StreamOperation.range();
+        StreamOperation.rangeClosed();
     }
 }
