@@ -13,6 +13,10 @@ public final class Printer {
         System.out.println(val);
     }
 
+    public static void println(double val) {
+        System.out.println(val);
+    }
+
     public static void println(String msg) {
         System.out.println(msg);
     }
